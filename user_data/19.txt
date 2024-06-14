@@ -1,0 +1,7 @@
+Name: 송정숙
+Address: 인천광역시 광진구 서초대로 (성현황리)
+Email: minjungsu@example.net
+Birthdate: 1945-07-04
+Phone Number: 019-042-4042
+Image File: user_images/19.jpg
+BrainScore: 100

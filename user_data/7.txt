@@ -1,0 +1,7 @@
+Name: 김서준
+Address: 광주광역시 광진구 삼성가 (영희최성리)
+Email: munseonghun@example.net
+Birthdate: 1959-08-30
+Phone Number: 063-770-7043
+Image File: user_images/7.jpg
+BrainScore: 100

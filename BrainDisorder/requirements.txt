@@ -1,0 +1,5 @@
+Flask
+tensorflow-gpu
+librosa
+matplotlib
+scikit-image

@@ -1,0 +1,45 @@
+### 0. common
+# pipe_log
+log_config: log-config.yaml # 로그 파일 설정 파일
+log_file: log.txt # run_pipe.py 실행로그를 기록할 파일 지정
+error_file_log: error_files.txt # wrong audio files
+wrong_samplerate_file: wrong_samplerate.txt # samplerate이 16000이 아닌 파일 목록
+
+kdialect_base_dir: ..
+tokenizer_dir: !ref <kdialect_base_dir>/Tokenizer
+lm_dir: !ref <kdialect_base_dir>/LM
+asr_dir: !ref <kdialect_base_dir>/ASR/Conformer
+
+# run modules, 아래 지정된 모듈 들을 순차적으로 실행
+run_modules:
+    - tokenizer
+    # - lm
+    - asr
+
+run_provinces: # 아래 지정된 지역 방언에 대하여 순차적으로 실행(gw:강원, gs:경상, jl:전라, jj:제주, cc:충청)
+    # - gw
+    # - gs
+    # - jl
+    - jj
+    # - cc
+    # - total
+
+gpu_num: 4 # 사용할 gpu 수, 시스템의 가용 GPU 수 보다 크면 안됨.
+
+# 결과 모델 파일을 trained model dir로 복사 여부
+copy_trained_model: True
+pretrained_model_base: !ref <asr_dir>/Inference/pretrained-model-src # 학습된 모델을 사용하기 위해 복사할 디렉토리
+
+smaplerate: 16000
+
+### 1. Tokenizer, 지역 별 어휘의 수 설정, 제주만 어휘 수가 적어서 1000으로 설정 
+tokenizer_dict: # provice_code : token_output: 5000
+   gw: 5000
+   gs: 5000
+   jl: 5000
+   jj: 1000 
+   cc: 5000
+
+### 2. LM(언어모델)
+
+### 3. ASR(음성인식)

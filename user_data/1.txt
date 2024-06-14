@@ -1,0 +1,7 @@
+Name: 김정숙
+Address: 인천광역시 성동구 양재천878로
+Email: ogsun49@example.net
+Birthdate: 1909-03-23
+Phone Number: 017-658-3086
+Image File: user_images/1.jpg
+Brain Score: 50.57561683654785

@@ -1,0 +1,28 @@
+log_config: log-config.yaml
+log_file: log.txt
+error_file_log: error_files.txt
+wrong_samplerate_file: wrong_samplerate.txt
+
+kdialect_base_dir: ..
+tokenizer_dir: !ref <kdialect_base_dir>/Tokenizer
+lm_dir: !ref <kdialect_base_dir>/LM
+asr_dir: !ref <kdialect_base_dir>/ASR/Conformer
+
+run_modules:
+  - tokenizer
+  - asr
+
+run_provinces:
+  - jj
+
+gpu_num: 4
+copy_trained_model: true
+pretrained_model_base: !ref <asr_dir>/Inference/pretrained-model-src
+smaplerate: 16000
+
+tokenizer_dict:
+  gw: 5000
+  gs: 5000
+  jl: 5000
+  jj: 1000
+  cc: 5000

@@ -1,0 +1,33 @@
+2024-03-13 23:01:13,712 - __main__ - INFO - Data path set to: C:/Users/CSH/Desktop/cap/data/allset
+2024-03-13 23:01:13,713 - __main__ - INFO - make pretrained_model_dir : ./ASR/Conformer/Inference/pretrained-model-src/jj
+2024-03-13 23:01:13,713 - __main__ - INFO - tokenizer run_option : --province_code=jj
+2024-03-13 23:01:13,714 - __main__ - INFO - tokenizer_dir : ./Tokenizer
+2024-03-13 23:01:13,714 - __main__ - INFO - cmd : python train.py hparams/1K_unigram_subword_bpe_jj.yaml --province_code=jj
+2024-03-13 23:01:16,903 - __main__ - INFO - returncode : 1
+2024-03-13 23:01:16,904 - __main__ - INFO - asr run_option : --province_code=jj
+2024-03-13 23:01:16,904 - __main__ - INFO - gpu num : 1
+2024-03-13 23:01:16,904 - __main__ - INFO - province : jj
+2024-03-13 23:01:16,904 - __main__ - INFO - cmd : python train.py hparams/conformer_medium.yaml --province_code=jj
+2024-03-13 23:01:16,905 - __main__ - INFO - asr_dir : ./ASR/Conformer
+2024-03-13 23:03:18,531 - __main__ - INFO - Data path set to: C:/Users/CSH/Desktop/cap/data/allset
+2024-03-13 23:03:18,532 - __main__ - INFO - make pretrained_model_dir : ./ASR/Conformer/Inference/pretrained-model-src/jj
+2024-03-13 23:03:18,533 - __main__ - INFO - tokenizer run_option : --province_code=jj
+2024-03-13 23:03:18,533 - __main__ - INFO - tokenizer_dir : ./Tokenizer
+2024-03-13 23:03:18,534 - __main__ - INFO - cmd : python train.py hparams/1K_unigram_subword_bpe_jj.yaml --province_code=jj
+2024-03-13 23:03:22,101 - __main__ - INFO - returncode : 1
+2024-03-13 23:03:22,102 - __main__ - INFO - asr run_option : --province_code=jj
+2024-03-13 23:03:22,102 - __main__ - INFO - gpu num : 1
+2024-03-13 23:03:22,102 - __main__ - INFO - province : jj
+2024-03-13 23:03:22,102 - __main__ - INFO - cmd : python train.py hparams/conformer_medium.yaml --province_code=jj
+2024-03-13 23:03:22,102 - __main__ - INFO - asr_dir : ./ASR/Conformer
+2024-04-15 20:21:23,662 - __main__ - INFO - Data path set to: C:/Users/CSH/Desktop/cap/data/allset
+2024-04-15 20:21:23,663 - __main__ - INFO - make pretrained_model_dir : ./ASR/Conformer/Inference/pretrained-model-src/jj
+2024-04-15 20:21:23,664 - __main__ - INFO - tokenizer run_option : --province_code=jj
+2024-04-15 20:21:23,664 - __main__ - INFO - tokenizer_dir : ./Tokenizer
+2024-04-15 20:21:23,664 - __main__ - INFO - cmd : python train.py hparams/1K_unigram_subword_bpe_jj.yaml --province_code=jj
+2024-04-15 20:21:31,286 - __main__ - INFO - returncode : 1
+2024-04-15 20:21:31,287 - __main__ - INFO - asr run_option : --province_code=jj
+2024-04-15 20:21:31,287 - __main__ - INFO - gpu num : 1
+2024-04-15 20:21:31,287 - __main__ - INFO - province : jj
+2024-04-15 20:21:31,288 - __main__ - INFO - cmd : python train.py hparams/conformer_medium.yaml --province_code=jj
+2024-04-15 20:21:31,288 - __main__ - INFO - asr_dir : ./ASR/Conformer

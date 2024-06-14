@@ -1,0 +1,1090 @@
+2024-03-13 20:46:41,634 - speechbrain.core - INFO - Beginning experiment!
+2024-03-13 20:46:41,634 - speechbrain.core - INFO - Experiment folder: results/Conformer/7774/jj
+2024-03-13 20:46:42,163 - speechbrain.utils.superpowers - DEBUG - absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+speechbrain==1.0.0
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-03-13 20:46:42,223 - kdialectspeech_prepare - INFO - save_folder : ../../Tokenizer/results/data_prepared/jj
+2024-03-13 20:46:42,223 - kdialectspeech_prepare - INFO - skip : False
+2024-03-13 20:46:42,223 - kdialectspeech_prepare - INFO - Data_preparation...
+2024-03-13 20:46:42,223 - kdialectspeech_prepare - INFO - data_folder : ../../Tokenizer/results/data_prepared/jj
+2024-03-13 20:46:42,223 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 557, in <module>
+    run_on_main(
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\utils\distributed.py", line 61, in run_on_main
+    func(*args, **kwargs)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\kdialectspeech_prepare.py", line 117, in prepare_kdialectspeech
+    check_kdialectspeech_folders(data_folder, province_code)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\kdialectspeech_prepare.py", line 240, in check_kdialectspeech_folders
+    raise OSError(err_msg)
+OSError: the directory ../../Tokenizer/results/data_prepared/jj\people/talk/jj does not exist (it is expected in the kdialectspeech dataset)
+2024-03-13 20:48:39,183 - speechbrain.core - INFO - Beginning experiment!
+2024-03-13 20:48:39,183 - speechbrain.core - INFO - Experiment folder: results/Conformer/7774/jj
+2024-03-13 20:48:39,748 - speechbrain.utils.superpowers - DEBUG - absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+speechbrain==1.0.0
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-03-13 20:48:39,801 - kdialectspeech_prepare - INFO - save_folder : ../../Tokenizer/results/data_prepared/jj
+2024-03-13 20:48:39,801 - kdialectspeech_prepare - INFO - skip : False
+2024-03-13 20:48:39,801 - kdialectspeech_prepare - INFO - Data_preparation...
+2024-03-13 20:48:39,801 - kdialectspeech_prepare - INFO - data_folder : ../../Tokenizer/results/data_prepared/jj
+2024-03-13 20:48:39,802 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 557, in <module>
+    run_on_main(
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\utils\distributed.py", line 61, in run_on_main
+    func(*args, **kwargs)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\kdialectspeech_prepare.py", line 117, in prepare_kdialectspeech
+    check_kdialectspeech_folders(data_folder, province_code)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\kdialectspeech_prepare.py", line 240, in check_kdialectspeech_folders
+    raise OSError(err_msg)
+OSError: the directory ../../Tokenizer/results/data_prepared/jj\people/talk/jj does not exist (it is expected in the kdialectspeech dataset)
+2024-03-13 22:25:33,554 - speechbrain.core - INFO - Beginning experiment!
+2024-03-13 22:25:33,554 - speechbrain.core - INFO - Experiment folder: results/Conformer/7774/jj
+2024-03-13 22:25:34,141 - speechbrain.utils.superpowers - DEBUG - ('ver',) {'stdout': -1, 'stdin': -3, 'stderr': -3, 'text': True, 'shell': True}
+absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-03-13 22:25:34,188 - kdialectspeech_prepare - INFO - save_folder : ../../Tokenizer/results/data_prepared/jj
+2024-03-13 22:25:34,188 - kdialectspeech_prepare - INFO - skip : True
+2024-03-13 22:25:34,188 - kdialectspeech_prepare - INFO - Skipping preparation, completed in previous run.
+2024-03-13 22:25:34,188 - __main__ - INFO - prepared to train : Tokenizer
+2024-03-13 22:25:34,188 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 570, in <module>
+    train_data, valid_data, test_data, tokenizer = dataio_prepare(hparams)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 388, in dataio_prepare
+    train_data = sb.dataio.dataset.DynamicItemDataset.from_csv(
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 366, in from_csv
+    return cls(data, dynamic_items, output_keys)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 151, in __init__
+    static_keys = list(self.data[self.data_ids[0]].keys())
+IndexError: list index out of range
+2024-03-13 22:26:53,551 - speechbrain.core - INFO - Beginning experiment!
+2024-03-13 22:26:53,551 - speechbrain.core - INFO - Experiment folder: results/Conformer/7774/jj
+2024-03-13 22:26:54,087 - speechbrain.utils.superpowers - DEBUG - ('ver',) {'stdout': -1, 'stdin': -3, 'stderr': -3, 'text': True, 'shell': True}
+absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-03-13 22:26:54,137 - kdialectspeech_prepare - INFO - save_folder : ../../Tokenizer/results/data_prepared/jj
+2024-03-13 22:26:54,137 - kdialectspeech_prepare - INFO - skip : True
+2024-03-13 22:26:54,137 - kdialectspeech_prepare - INFO - Skipping preparation, completed in previous run.
+2024-03-13 22:26:54,137 - __main__ - INFO - prepared to train : Tokenizer
+2024-03-13 22:26:54,137 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 570, in <module>
+    train_data, valid_data, test_data, tokenizer = dataio_prepare(hparams)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 388, in dataio_prepare
+    train_data = sb.dataio.dataset.DynamicItemDataset.from_csv(
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 366, in from_csv
+    return cls(data, dynamic_items, output_keys)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 151, in __init__
+    static_keys = list(self.data[self.data_ids[0]].keys())
+IndexError: list index out of range
+2024-03-13 22:27:51,784 - speechbrain.core - INFO - Beginning experiment!
+2024-03-13 22:27:51,785 - speechbrain.core - INFO - Experiment folder: results/Conformer/7774/jj
+2024-03-13 22:27:52,309 - speechbrain.utils.superpowers - DEBUG - ('ver',) {'stdout': -1, 'stdin': -3, 'stderr': -3, 'text': True, 'shell': True}
+absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-03-13 22:27:52,353 - kdialectspeech_prepare - INFO - save_folder : ../../Tokenizer/results/data_prepared/jj
+2024-03-13 22:27:52,353 - kdialectspeech_prepare - INFO - skip : True
+2024-03-13 22:27:52,353 - kdialectspeech_prepare - INFO - Skipping preparation, completed in previous run.
+2024-03-13 22:27:52,353 - __main__ - INFO - prepared to train : Tokenizer
+2024-03-13 22:27:52,353 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 570, in <module>
+    train_data, valid_data, test_data, tokenizer = dataio_prepare(hparams)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 388, in dataio_prepare
+    train_data = sb.dataio.dataset.DynamicItemDataset.from_csv(
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 366, in from_csv
+    return cls(data, dynamic_items, output_keys)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 151, in __init__
+    static_keys = list(self.data[self.data_ids[0]].keys())
+IndexError: list index out of range
+2024-03-13 22:31:22,190 - speechbrain.core - INFO - Beginning experiment!
+2024-03-13 22:31:22,190 - speechbrain.core - INFO - Experiment folder: results/Conformer/7774/jj
+2024-03-13 22:31:22,736 - speechbrain.utils.superpowers - DEBUG - ('ver',) {'stdout': -1, 'stdin': -3, 'stderr': -3, 'text': True, 'shell': True}
+absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-03-13 22:31:22,781 - kdialectspeech_prepare - INFO - save_folder : ../../Tokenizer/results/data_prepared/jj
+2024-03-13 22:31:22,783 - kdialectspeech_prepare - INFO - skip : True
+2024-03-13 22:31:22,783 - kdialectspeech_prepare - INFO - Skipping preparation, completed in previous run.
+2024-03-13 22:31:22,783 - __main__ - INFO - prepared to train : Tokenizer
+2024-03-13 22:31:22,783 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 570, in <module>
+    train_data, valid_data, test_data, tokenizer = dataio_prepare(hparams)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 388, in dataio_prepare
+    train_data = sb.dataio.dataset.DynamicItemDataset.from_csv(
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 366, in from_csv
+    return cls(data, dynamic_items, output_keys)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 151, in __init__
+    static_keys = list(self.data[self.data_ids[0]].keys())
+IndexError: list index out of range
+2024-03-13 22:32:22,657 - speechbrain.core - INFO - Beginning experiment!
+2024-03-13 22:32:22,658 - speechbrain.core - INFO - Experiment folder: results/Conformer/7774/jj
+2024-03-13 22:32:23,236 - speechbrain.utils.superpowers - DEBUG - ('ver',) {'stdout': -1, 'stdin': -3, 'stderr': -3, 'text': True, 'shell': True}
+absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-03-13 22:32:23,287 - kdialectspeech_prepare - INFO - save_folder : ../../Tokenizer/results/data_prepared/jj
+2024-03-13 22:32:23,288 - kdialectspeech_prepare - INFO - skip : True
+2024-03-13 22:32:23,288 - kdialectspeech_prepare - INFO - Skipping preparation, completed in previous run.
+2024-03-13 22:32:23,288 - __main__ - INFO - prepared to train : Tokenizer
+2024-03-13 22:32:23,288 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 570, in <module>
+    train_data, valid_data, test_data, tokenizer = dataio_prepare(hparams)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 388, in dataio_prepare
+    train_data = sb.dataio.dataset.DynamicItemDataset.from_csv(
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 366, in from_csv
+    return cls(data, dynamic_items, output_keys)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 151, in __init__
+    static_keys = list(self.data[self.data_ids[0]].keys())
+IndexError: list index out of range
+2024-03-13 23:01:20,323 - speechbrain.core - INFO - Beginning experiment!
+2024-03-13 23:01:20,324 - speechbrain.core - INFO - Experiment folder: results/Conformer/7774/jj
+2024-03-13 23:01:20,846 - speechbrain.utils.superpowers - DEBUG - ('ver',) {'stdout': -1, 'stdin': -3, 'stderr': -3, 'text': True, 'shell': True}
+absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-03-13 23:01:20,894 - kdialectspeech_prepare - INFO - save_folder : ../../Tokenizer/results/data_prepared/jj
+2024-03-13 23:01:20,895 - kdialectspeech_prepare - INFO - skip : True
+2024-03-13 23:01:20,895 - kdialectspeech_prepare - INFO - Skipping preparation, completed in previous run.
+2024-03-13 23:01:20,895 - __main__ - INFO - prepared to train : Tokenizer
+2024-03-13 23:01:20,896 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 570, in <module>
+    train_data, valid_data, test_data, tokenizer = dataio_prepare(hparams)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 388, in dataio_prepare
+    train_data = sb.dataio.dataset.DynamicItemDataset.from_csv(
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 366, in from_csv
+    return cls(data, dynamic_items, output_keys)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 151, in __init__
+    static_keys = list(self.data[self.data_ids[0]].keys())
+IndexError: list index out of range
+2024-03-13 23:03:25,751 - speechbrain.core - INFO - Beginning experiment!
+2024-03-13 23:03:25,752 - speechbrain.core - INFO - Experiment folder: results/Conformer/7774/jj
+2024-03-13 23:03:26,294 - speechbrain.utils.superpowers - DEBUG - ('ver',) {'stdout': -1, 'stdin': -3, 'stderr': -3, 'text': True, 'shell': True}
+absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-03-13 23:03:26,348 - kdialectspeech_prepare - INFO - save_folder : ../../Tokenizer/results/data_prepared/jj
+2024-03-13 23:03:26,354 - kdialectspeech_prepare - INFO - skip : True
+2024-03-13 23:03:26,354 - kdialectspeech_prepare - INFO - Skipping preparation, completed in previous run.
+2024-03-13 23:03:26,355 - __main__ - INFO - prepared to train : Tokenizer
+2024-03-13 23:03:26,355 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 570, in <module>
+    train_data, valid_data, test_data, tokenizer = dataio_prepare(hparams)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 388, in dataio_prepare
+    train_data = sb.dataio.dataset.DynamicItemDataset.from_csv(
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 366, in from_csv
+    return cls(data, dynamic_items, output_keys)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 151, in __init__
+    static_keys = list(self.data[self.data_ids[0]].keys())
+IndexError: list index out of range
+2024-04-15 20:21:35,919 - speechbrain.core - INFO - Beginning experiment!
+2024-04-15 20:21:35,920 - speechbrain.core - INFO - Experiment folder: results/Conformer/7774/jj
+2024-04-15 20:21:36,547 - speechbrain.utils.superpowers - DEBUG - ('ver',) {'stdout': -1, 'stdin': -3, 'stderr': -3, 'text': True, 'shell': True}
+absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-04-15 20:21:36,604 - kdialectspeech_prepare - INFO - save_folder : ../../Tokenizer/results/data_prepared/jj
+2024-04-15 20:21:36,606 - kdialectspeech_prepare - INFO - skip : True
+2024-04-15 20:21:36,606 - kdialectspeech_prepare - INFO - Skipping preparation, completed in previous run.
+2024-04-15 20:21:36,606 - __main__ - INFO - prepared to train : Tokenizer
+2024-04-15 20:21:36,613 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 570, in <module>
+    train_data, valid_data, test_data, tokenizer = dataio_prepare(hparams)
+  File "C:\Users\CSH\Desktop\cap\ASR\Conformer\train.py", line 388, in dataio_prepare
+    train_data = sb.dataio.dataset.DynamicItemDataset.from_csv(
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 366, in from_csv
+    return cls(data, dynamic_items, output_keys)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\dataio\dataset.py", line 151, in __init__
+    static_keys = list(self.data[self.data_ids[0]].keys())
+IndexError: list index out of range

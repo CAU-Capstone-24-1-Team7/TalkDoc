@@ -1,0 +1,7 @@
+Name: 양수진
+Address: 경기도 보은군 압구정9가
+Email: bagbyeongceol@example.com
+Birthdate: 1983-07-02
+Phone Number: 051-091-0070
+Image File: user_images/6.jpg
+BrainScore: 100

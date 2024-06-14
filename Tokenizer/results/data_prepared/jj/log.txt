@@ -1,0 +1,350 @@
+2024-03-13 23:09:24,328 - speechbrain.core - INFO - Beginning experiment!
+2024-03-13 23:09:24,329 - speechbrain.core - INFO - Experiment folder: results/data_prepared/jj
+2024-03-13 23:09:24,971 - speechbrain.utils.superpowers - DEBUG - ('ver',) {'stdout': -1, 'stdin': -3, 'stderr': -3, 'text': True, 'shell': True}
+absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-03-13 23:09:25,017 - kdialectspeech_prepare - INFO - save_folder : results/data_prepared/jj
+2024-03-13 23:09:25,018 - kdialectspeech_prepare - INFO - skip : False
+2024-03-13 23:09:25,018 - kdialectspeech_prepare - INFO - Data_preparation...
+2024-03-13 23:09:25,018 - kdialectspeech_prepare - INFO - data_folder : C:/Users/CSH/Desktop/cap/data/allset
+2024-03-13 23:09:25,307 - speechbrain.tokenizers.SentencePiece - INFO - Train tokenizer with type:unigram
+2024-03-13 23:09:25,308 - speechbrain.tokenizers.SentencePiece - INFO - Extract wrd sequences from:results/data_prepared/jj/train.csv
+2024-03-13 23:09:25,311 - speechbrain.tokenizers.SentencePiece - INFO - Text file created at: results/data_prepared/jj/train.txt
+2024-03-13 23:09:25,319 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\Tokenizer\train.py", line 37, in <module>
+    hparams["tokenizer"]()
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\tokenizers\SentencePiece.py", line 180, in __init__
+    run_on_main(self._train_BPE)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\utils\distributed.py", line 61, in run_on_main
+    func(*args, **kwargs)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\tokenizers\SentencePiece.py", line 314, in _train_BPE
+    spm.SentencePieceTrainer.train(query)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\sentencepiece\__init__.py", line 1047, in Train
+    SentencePieceTrainer._Train(arg=arg, **kwargs)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\sentencepiece\__init__.py", line 1003, in _Train
+    return SentencePieceTrainer._TrainFromString(arg)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\sentencepiece\__init__.py", line 981, in _TrainFromString
+    return _sentencepiece.SentencePieceTrainer__TrainFromString(arg)
+RuntimeError: Internal: D:\a\sentencepiece\sentencepiece\src\trainer_interface.cc(431) [!sentences_.empty()] 
+2024-03-13 23:11:07,180 - speechbrain.core - INFO - Beginning experiment!
+2024-03-13 23:11:07,181 - speechbrain.core - INFO - Experiment folder: results/data_prepared/jj
+2024-03-13 23:11:07,698 - speechbrain.utils.superpowers - DEBUG - ('ver',) {'stdout': -1, 'stdin': -3, 'stderr': -3, 'text': True, 'shell': True}
+absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-03-13 23:11:07,747 - kdialectspeech_prepare - INFO - save_folder : results/data_prepared/jj
+2024-03-13 23:11:07,749 - kdialectspeech_prepare - INFO - skip : True
+2024-03-13 23:11:07,749 - kdialectspeech_prepare - INFO - Data_preparation...
+2024-03-13 23:11:07,749 - kdialectspeech_prepare - INFO - data_folder : C:/Users/CSH/Desktop/cap/data/allset
+2024-03-13 23:11:07,993 - speechbrain.tokenizers.SentencePiece - INFO - Train tokenizer with type:unigram
+2024-03-13 23:11:07,998 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\Tokenizer\train.py", line 37, in <module>
+    hparams["tokenizer"]()
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\tokenizers\SentencePiece.py", line 180, in __init__
+    run_on_main(self._train_BPE)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\utils\distributed.py", line 61, in run_on_main
+    func(*args, **kwargs)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\tokenizers\SentencePiece.py", line 314, in _train_BPE
+    spm.SentencePieceTrainer.train(query)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\sentencepiece\__init__.py", line 1047, in Train
+    SentencePieceTrainer._Train(arg=arg, **kwargs)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\sentencepiece\__init__.py", line 1003, in _Train
+    return SentencePieceTrainer._TrainFromString(arg)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\sentencepiece\__init__.py", line 981, in _TrainFromString
+    return _sentencepiece.SentencePieceTrainer__TrainFromString(arg)
+RuntimeError: Internal: D:\a\sentencepiece\sentencepiece\src\trainer_interface.cc(431) [!sentences_.empty()] 
+2024-04-15 20:21:26,492 - speechbrain.core - INFO - Beginning experiment!
+2024-04-15 20:21:26,492 - speechbrain.core - INFO - Experiment folder: results/data_prepared/jj
+2024-04-15 20:21:27,174 - speechbrain.utils.superpowers - DEBUG - ('ver',) {'stdout': -1, 'stdin': -3, 'stderr': -3, 'text': True, 'shell': True}
+absl-py==2.1.0
+appdirs==1.4.4
+atomicwrites==1.4.1
+attrs==23.2.0
+audioread==3.0.1
+black==19.10b0
+boto3==1.34.59
+botocore==1.34.59
+certifi==2024.2.2
+cffi==1.16.0
+cfgv==3.4.0
+charset-normalizer==3.3.2
+click==8.0.4
+colorama==0.4.6
+decorator==5.1.1
+distlib==0.3.8
+entrypoints==0.3
+filelock==3.13.1
+flake8==3.7.9
+fsspec==2024.2.0
+grpcio==1.62.1
+huggingface-hub==0.21.4
+HyperPyYAML==1.2.2
+identify==2.5.35
+idna==3.6
+importlib_metadata==7.0.2
+Jinja2==3.1.3
+jmespath==1.0.1
+joblib==1.3.2
+lazy_loader==0.3
+librosa==0.10.1
+llvmlite==0.42.0
+Markdown==3.5.2
+MarkupSafe==2.1.5
+mccabe==0.6.1
+more-itertools==10.2.0
+mpmath==1.3.0
+msgpack==1.0.8
+networkx==3.2.1
+nodeenv==1.8.0
+numba==0.59.0
+numpy==1.24.4
+packaging==24.0
+pandas==2.2.1
+pathspec==0.12.1
+pillow==10.2.0
+platformdirs==4.2.0
+pluggy==0.13.1
+pooch==1.8.1
+pre-commit==3.6.2
+protobuf==4.25.3
+py==1.11.0
+pycodestyle==2.5.0
+pycparser==2.21
+pydub==0.25.1
+pyflakes==2.1.1
+pytest==5.4.1
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.1
+regex==2023.12.25
+requests==2.31.0
+ruamel.yaml==0.18.6
+ruamel.yaml.clib==0.2.8
+s3transfer==0.10.0
+scikit-learn==1.4.1.post1
+scipy==1.8.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.12.1
+soxr==0.3.7
+sympy==1.12
+tensorboard==2.16.2
+tensorboard-data-server==0.7.2
+threadpoolctl==3.3.0
+toml==0.10.2
+torch==2.2.1+cu121
+torchaudio==2.2.1
+torchvision==0.17.1
+tqdm==4.66.2
+typed-ast==1.5.5
+typing_extensions==4.10.0
+tzdata==2024.1
+urllib3==1.26.18
+virtualenv==20.25.1
+wcwidth==0.2.13
+Werkzeug==3.0.1
+yamllint==1.23.0
+zipp==3.18.0
+
+
+2024-04-15 20:21:27,261 - kdialectspeech_prepare - INFO - save_folder : results/data_prepared/jj
+2024-04-15 20:21:27,269 - kdialectspeech_prepare - INFO - skip : True
+2024-04-15 20:21:27,269 - kdialectspeech_prepare - INFO - Data_preparation...
+2024-04-15 20:21:27,269 - kdialectspeech_prepare - INFO - data_folder : C:/Users/CSH/Desktop/cap/data/allset
+2024-04-15 20:21:30,890 - speechbrain.tokenizers.SentencePiece - INFO - Train tokenizer with type:unigram
+2024-04-15 20:21:30,892 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "C:\Users\CSH\Desktop\cap\Tokenizer\train.py", line 37, in <module>
+    hparams["tokenizer"]()
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\tokenizers\SentencePiece.py", line 180, in __init__
+    run_on_main(self._train_BPE)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\utils\distributed.py", line 61, in run_on_main
+    func(*args, **kwargs)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\speechbrain\tokenizers\SentencePiece.py", line 314, in _train_BPE
+    spm.SentencePieceTrainer.train(query)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\sentencepiece\__init__.py", line 1047, in Train
+    SentencePieceTrainer._Train(arg=arg, **kwargs)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\sentencepiece\__init__.py", line 1003, in _Train
+    return SentencePieceTrainer._TrainFromString(arg)
+  File "C:\Users\CSH\AppData\Local\Programs\Python\Python39\lib\site-packages\sentencepiece\__init__.py", line 981, in _TrainFromString
+    return _sentencepiece.SentencePieceTrainer__TrainFromString(arg)
+RuntimeError: Internal: D:\a\sentencepiece\sentencepiece\src\trainer_interface.cc(431) [!sentences_.empty()] 

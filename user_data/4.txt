@@ -1,0 +1,7 @@
+Name: 이예진
+Address: 세종특별자치시 서초구 백제고분거리 (민재김김마을)
+Email: sangceolgim@example.com
+Birthdate: 1958-02-03
+Phone Number: 062-401-9526
+Image File: user_images/4.jpg
+BrainScore: 100

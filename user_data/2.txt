@@ -1,0 +1,7 @@
+Name: 박영일
+Address: 경상북도 춘천시 강남대9가 (상철최리)
+Email: songseoyeon@example.org
+Birthdate: 2017-03-21
+Phone Number: 043-452-5030
+Image File: user_images/2.jpg
+BrainScore: 100

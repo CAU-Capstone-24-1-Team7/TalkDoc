@@ -1,0 +1,7 @@
+Name: 이채원
+Address: 대전광역시 북구 석촌호수거리
+Email: aryu@example.org
+Birthdate: 1993-11-07
+Phone Number: 011-852-8890
+Image File: user_images/12.jpg
+BrainScore: 100

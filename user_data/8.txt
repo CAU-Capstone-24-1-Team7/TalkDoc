@@ -1,0 +1,7 @@
+Name: 박영진
+Address: 경상북도 오산시 봉은사거리 (영진김리)
+Email: gimyeji@example.net
+Birthdate: 1937-06-14
+Phone Number: 054-067-5210
+Image File: user_images/8.jpg
+Brain Score: 99.94844215811463

@@ -1,0 +1,7 @@
+Name: 강하윤
+Address: 울산광역시 송파구 양재천582길
+Email: abag@example.org
+Birthdate: 1918-04-11
+Phone Number: 070-4225-0670
+Image File: user_images/11.jpg
+BrainScore: 100

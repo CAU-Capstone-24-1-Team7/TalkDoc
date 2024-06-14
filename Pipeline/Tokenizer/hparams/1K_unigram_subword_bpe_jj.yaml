@@ -1,0 +1,48 @@
+# ############################################################################
+# Tokenizer: subword BPE with unigram 5K
+# Training: KsponSpeech train transcript
+# Authors:  Dongwon Kim, Dongwoo Kim 2021
+#           N Park 2022
+# ############################################################################
+
+province_code: jj #['gw', 'gs', 'jl', 'jj', 'cc']
+# output_folder: !ref results/5K_subword_unigram_LM/<province_code>
+output_folder: !ref results/data_prepared/<province_code>
+# train_log: !ref <output_folder>/train_log.txt
+
+
+
+# Data files
+## skip_prep: False
+data_folder: !ref /data/MTDATA/fn-2-018/root # e.g., /path/to/KdialectSpeech
+# splited_wav_folder: !ref <data_folder>/splited # 분리된 오디오 파일을 저장할 위치
+splited_wav_folder: same
+total_csv: !ref <output_folder>/total.csv
+train_csv: !ref <output_folder>/train.csv
+valid_csv: !ref <output_folder>/dev.csv
+test_csv: !ref <output_folder>/test.csv
+
+data_ratio: # train : valid : test
+   tr: 0.8
+   va: 0.1
+   te: 0.1
+
+# Training parameters
+token_type: unigram  # ["unigram", "bpe", "char"]
+token_output: 1000  # index(blank/eos/bos/unk) = 0
+character_coverage: 1.0
+csv_read: wrd
+bos_index: 1
+eos_index: 2
+
+
+tokenizer: !name:speechbrain.tokenizers.SentencePiece.SentencePiece
+   model_dir: !ref <output_folder>
+   vocab_size: !ref <token_output>
+   annotation_train: !ref <train_csv>
+   annotation_read: !ref <csv_read>
+   model_type: !ref <token_type>
+   character_coverage: !ref <character_coverage>
+   bos_id: !ref <bos_index> # Define bos_id/eos_id if different from blank_id
+   eos_id: !ref <eos_index>
+   annotation_list_to_check: [!ref <train_csv>, !ref <valid_csv>]

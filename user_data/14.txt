@@ -1,0 +1,7 @@
+Name: 박지아
+Address: 전라북도 태안군 양재천로 (정남이읍)
+Email: eunseo76@example.org
+Birthdate: 1973-06-22
+Phone Number: 052-483-6983
+Image File: user_images/14.jpg
+BrainScore: 100

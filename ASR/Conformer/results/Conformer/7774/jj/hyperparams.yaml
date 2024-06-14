@@ -1,0 +1,279 @@
+# Generated 2024-04-15 from:
+# C:\Users\CSH\Desktop\cap\ASR\Conformer\hparams\conformer_medium.yaml
+# yamllint disable
+# ############################################################################
+# Model: E2E ASR with Transformer
+# Encoder: Conformer Encoder
+# Decoder: Transformer Decoder + (CTC/ATT joint) beamsearch + TransformerLM
+# Tokens: unigram
+# losses: CTC + KLdiv (Label Smoothing loss)
+# Authors: Jianyuan Zhong, Titouan Parcollet, Samuele Cornell, Dongwon Kim, Dongwoo Kim, N Park
+# ############################################################################
+# Seed needs to be set at top of yaml, before objects with parameters are made
+seed: 7774
+__set_seed: !apply:torch.manual_seed [7774]
+
+province_code: jj #['gw', 'gs', 'jl', 'jj', 'cc', 'total']
+
+output_folder: results/Conformer/7774/jj
+wer_file: results/Conformer/7774/jj/swer_test.txt
+save_folder: results/Conformer/7774/jj/save
+train_log: results/Conformer/7774/jj/train_log.txt
+tb_log: results/Conformer/7774/jj/tb_log # tensorboard
+
+# Language model (LM) pretraining
+# NB: To avoid mismatch, the speech recognizer must be trained with the same
+# tokenizer used for LM training.
+# pretrained_lm_tokenizer_path: !ref ../../LM/results/Transformer/2222/<province_code>/save
+
+pretrained_lm_tokenizer_path: ../../Tokenizer/results/data_prepared/jj
+
+# Data files
+data_folder: ../../Tokenizer/results/data_prepared/jj
+splited_wav_folder: same
+
+train_csv: ../../Tokenizer/results/data_prepared/jj/train.csv
+valid_csv: ../../Tokenizer/results/data_prepared/jj/valid.csv
+test_csv: ../../Tokenizer/results/data_prepared/jj/test.csv
+
+data_ratio: # train : valid : test
+  tr: 0.8
+  va: 0.1
+  te: 0.1
+
+skip_prep: false
+
+# Training parameters
+# To make Transformers converge, the global bath size should be large enough.
+# The global batch size is computed as batch_size * n_gpus * gradient_accumulation.
+# Empirically, we found that this value should be >= 128.
+# Please, set your parameters accordingly.
+number_of_epochs: 100 # 100
+batch_size: 32 # 32 This works for GPUs with 80GB
+ctc_weight: 0.3
+gradient_accumulation: 4
+gradient_clipping: 5.0
+loss_reduction: batchmean
+sorting: ascending # random, ascending, descending
+
+# stages related parameters
+stage_one_epochs: 80
+lr_adam: 0.001
+lr_sgd: 0.000025
+
+# Feature parameters
+sample_rate: 16000
+n_fft: 400
+n_mels: 80
+
+# Dataloader options
+train_dataloader_opts:
+  batch_size: 32
+  shuffle: true
+
+valid_dataloader_opts:
+  batch_size: 1
+
+test_dataloader_opts:
+  batch_size: 1
+
+####################### Model parameters ###########################
+# Transformer
+d_model: 256
+nhead: 4
+num_encoder_layers: 12
+num_decoder_layers: 6
+d_ffn: 2048
+transformer_dropout: 0.1
+activation: &id001 !name:torch.nn.GELU
+output_neurons: 5000
+vocab_size: 5000
+
+# Outputs
+blank_index: 0
+label_smoothing: 0.1
+pad_index: 0
+bos_index: 1
+eos_index: 2
+unk_index: 0
+
+# Decoding parameters
+min_decode_ratio: 0.0
+max_decode_ratio: 1.0
+valid_search_interval: 100 # 10
+valid_beam_size: 10
+test_beam_size: 60
+lm_weight: 0.20
+ctc_weight_decode: 0.40
+
+############################## models ################################
+
+normalize: &id002 !new:speechbrain.processing.features.InputNormalization
+  norm_type: global
+  update_until_epoch: 4
+
+CNN: &id003 !new:speechbrain.lobes.models.convolution.ConvolutionFrontEnd
+  input_shape: (8, 10, 80)
+  num_blocks: 2
+  num_layers_per_block: 1
+  out_channels: (64, 32)
+  kernel_sizes: (3, 3)
+  strides: (2, 2)
+  residuals: (False, False)
+
+Transformer: &id004 !new:speechbrain.lobes.models.transformer.TransformerASR.TransformerASR
+                                                                                     # yamllint disable-line rule:line-length
+  input_size: 640
+  tgt_vocab: 5000
+  d_model: 256
+  nhead: 4
+  num_encoder_layers: 12
+  num_decoder_layers: 6
+  d_ffn: 2048
+  dropout: 0.1
+  activation: *id001
+  encoder_module: conformer
+  attention_type: RelPosMHAXL
+  normalize_before: true
+  causal: false
+
+# NB: It has to match the pre-trained TransformerLM!!
+lm_model: !new:speechbrain.lobes.models.transformer.TransformerLM.TransformerLM
+                                                                                # yamllint disable-line rule:line-length
+  vocab: 5000
+  d_model: 768
+  nhead: 12
+  num_encoder_layers: 12
+  num_decoder_layers: 0
+  d_ffn: 3072
+  dropout: 0.0
+  activation: !name:torch.nn.GELU
+  normalize_before: false
+
+tokenizer: &id010 !new:sentencepiece.SentencePieceProcessor
+
+ctc_lin: &id006 !new:speechbrain.nnet.linear.Linear
+
+  input_size: 256
+  n_neurons: 5000
+
+seq_lin: &id005 !new:speechbrain.nnet.linear.Linear
+  input_size: 256
+  n_neurons: 5000
+
+modules:
+  normalize: *id002
+  CNN: *id003
+  Transformer: *id004
+  seq_lin: *id005
+  ctc_lin: *id006
+model: &id007 !new:torch.nn.ModuleList
+- [*id002, *id003, *id004, *id005, *id006]
+Adam: !name:torch.optim.Adam
+  lr: 0.001
+  betas: (0.9, 0.98)
+  eps: 0.000000001
+
+SGD: !name:torch.optim.SGD
+  lr: 0.000025
+  momentum: 0.99
+  nesterov: true
+
+valid_search: !new:speechbrain.decoders.S2STransformerBeamSearch
+  modules: [*id004, *id005, *id006]
+  bos_index: 1
+  eos_index: 2
+  blank_index: 0
+  min_decode_ratio: 0.0
+  max_decode_ratio: 1.0
+  beam_size: 10
+  ctc_weight: 0.40
+  using_eos_threshold: false
+  length_normalization: false
+
+
+test_search: !new:speechbrain.decoders.S2STransformerBeamSearch
+  modules: [*id004, *id005, *id006]
+  bos_index: 1
+  eos_index: 2
+  blank_index: 0
+  min_decode_ratio: 0.0
+  max_decode_ratio: 1.0
+  beam_size: 60
+  ctc_weight: 0.40
+    # lm_weight: !ref <lm_weight>
+    # lm_modules: !ref <lm_model>
+    # temperature: 1.25
+    # temperature_lm: 1.25
+  using_eos_threshold: false
+  length_normalization: false   # True
+
+log_softmax: !new:torch.nn.LogSoftmax
+  dim: -1
+
+ctc_cost: !name:speechbrain.nnet.losses.ctc_loss
+  blank_index: 0
+  reduction: batchmean
+
+seq_cost: !name:speechbrain.nnet.losses.kldiv_loss
+  label_smoothing: 0.1
+  reduction: batchmean
+
+noam_annealing: &id008 !new:speechbrain.nnet.schedulers.NoamScheduler
+  lr_initial: 0.001
+  n_warmup_steps: 3000
+#    model_size: !ref <d_model>
+
+checkpointer: !new:speechbrain.utils.checkpoints.Checkpointer
+  checkpoints_dir: results/Conformer/7774/jj/save
+  recoverables:
+    model: *id007
+    noam_scheduler: *id008
+    normalizer: *id002
+    counter: &id009 !new:speechbrain.utils.epoch_loop.EpochCounter
+
+      limit: 100
+
+epoch_counter: *id009
+augmentation: !new:speechbrain.lobes.augment.SpecAugment
+  time_warp: false
+  time_warp_window: 5
+  time_warp_mode: bicubic
+  freq_mask: true
+  n_freq_mask: 2
+  time_mask: true
+  n_time_mask: 4
+  replace_with_zero: false
+  freq_mask_width: 30
+  time_mask_width: 40
+
+speed_perturb: !new:speechbrain.processing.speech_augmentation.SpeedPerturb
+  orig_freq: 16000
+  speeds: [95, 100, 105]
+
+compute_features: !new:speechbrain.lobes.features.Fbank
+  sample_rate: 16000
+  n_fft: 400
+  n_mels: 80
+
+train_logger: !new:speechbrain.utils.train_logger.FileTrainLogger
+  save_file: results/Conformer/7774/jj/train_log.txt
+
+# train_logger: !new:speechbrain.utils.train_logger.TensorboardLogger
+#     save_dir: !ref <tb_log>
+
+error_rate_computer: !name:speechbrain.utils.metric_stats.ErrorRateStats
+acc_computer: !name:speechbrain.utils.Accuracy.AccuracyStats
+
+# The pretrainer allows a mapping between pretrained files and instances that
+# are declared in the yaml.
+pretrainer: !new:speechbrain.utils.parameter_transfer.Pretrainer
+  collect_in: results/Conformer/7774/jj/save
+  loadables:
+        # lm: !ref <lm_model>
+    tokenizer: *id010
+  paths:
+        # lm: !ref <pretrained_lm_tokenizer_path>/lm.ckpt
+        # tokenizer: !ref <pretrained_lm_tokenizer_path>/tokenizer.ckpt
+    tokenizer: ../../Tokenizer/results/data_prepared/jj/5000_unigram.model
+

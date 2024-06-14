@@ -1,0 +1,7 @@
+Name: 오미영
+Address: 강원도 화천군 백제고분로 (명숙김동)
+Email: igyeongsu@example.org
+Birthdate: 1989-02-08
+Phone Number: 033-983-2610
+Image File: user_images/5.jpg
+BrainScore: 100

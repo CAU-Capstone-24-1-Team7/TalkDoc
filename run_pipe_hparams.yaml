@@ -1,0 +1,30 @@
+# Training parameters
+
+number_of_epochs: 100 # 100
+batch_size: 32 # 32 This works for GPUs with 80GB
+ctc_weight: 0.3
+gradient_accumulation: 4
+gradient_clipping: 5.0
+loss_reduction: 'batchmean'
+sorting: ascending # random, ascending, descending
+
+# stages related parameters
+stage_one_epochs: 80
+lr_adam: 0.001
+lr_sgd: 0.000025
+
+# Feature parameters
+sample_rate: 16000
+n_fft: 400
+n_mels: 80
+
+# Dataloader options
+train_dataloader_opts:
+    batch_size: !ref <batch_size>
+    shuffle: True
+
+valid_dataloader_opts:
+    batch_size: 1
+
+test_dataloader_opts:
+    batch_size: 1

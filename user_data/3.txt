@@ -1,0 +1,7 @@
+Name: 이성현
+Address: 울산광역시 성동구 영동대22거리
+Email: gimyeongmi@example.net
+Birthdate: 2007-11-05
+Phone Number: 010-4722-6972
+Image File: user_images/3.jpg
+BrainScore: 100

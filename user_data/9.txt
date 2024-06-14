@@ -1,0 +1,7 @@
+Name: 김서윤
+Address: 대전광역시 강북구 백제고분93거리 (성진김김동)
+Email: zo@example.org
+Birthdate: 1963-05-30
+Phone Number: 02-5751-9753
+Image File: user_images/9.jpg
+BrainScore: 100

@@ -1,0 +1,7 @@
+Name: 이종수
+Address: 인천광역시 강북구 양재천길
+Email: jiyeon33@example.net
+Birthdate: 1923-05-28
+Phone Number: 010-7980-7886
+Image File: user_images/16.jpg
+BrainScore: 100

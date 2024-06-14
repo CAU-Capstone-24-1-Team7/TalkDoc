@@ -1,0 +1,7 @@
+Name: 정영환
+Address: 전라북도 보령시 강남대로 (영순박동)
+Email: ri@example.com
+Birthdate: 1986-12-13
+Phone Number: 032-650-5041
+Image File: user_images/13.jpg
+BrainScore: 100
